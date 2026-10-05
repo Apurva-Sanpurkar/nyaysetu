@@ -4,6 +4,7 @@ import { ROLE_HOME } from "./lib/format";
 import type { Role } from "./lib/api";
 import { PortalShell } from "./components/PortalShell";
 import { ApiUnreachable } from "./components/ApiUnreachable";
+import { ErrorBoundary } from "./components/ErrorBoundary";
 import { LinkButton, Spinner } from "./components/ui";
 import { LogoMark } from "./components/Logo";
 
@@ -252,11 +253,13 @@ export default function App() {
       />
 
       {/* --------------------------------------------------- court admin */}
+      {/* A per-area boundary so a broken admin page falls back to a usable
+          error screen instead of blanking the whole shell. */}
       <Route
         path="/admin"
         element={
           <Guard roles={["court_admin"]}>
-            <AdminOverview />
+            <ErrorBoundary scope="Admin" home="/admin"><AdminOverview /></ErrorBoundary>
           </Guard>
         }
       />
@@ -264,7 +267,7 @@ export default function App() {
         path="/admin/users"
         element={
           <Guard roles={["court_admin"]}>
-            <AdminUsers />
+            <ErrorBoundary scope="Admin" home="/admin"><AdminUsers /></ErrorBoundary>
           </Guard>
         }
       />
@@ -272,7 +275,7 @@ export default function App() {
         path="/admin/access"
         element={
           <Guard roles={["court_admin"]}>
-            <AdminAccess />
+            <ErrorBoundary scope="Admin" home="/admin"><AdminAccess /></ErrorBoundary>
           </Guard>
         }
       />
@@ -280,7 +283,7 @@ export default function App() {
         path="/admin/audit"
         element={
           <Guard roles={["court_admin"]}>
-            <AdminAudit />
+            <ErrorBoundary scope="Admin" home="/admin"><AdminAudit /></ErrorBoundary>
           </Guard>
         }
       />
@@ -288,7 +291,7 @@ export default function App() {
         path="/admin/chain"
         element={
           <Guard roles={["court_admin"]}>
-            <AdminChain />
+            <ErrorBoundary scope="Admin" home="/admin"><AdminChain /></ErrorBoundary>
           </Guard>
         }
       />
