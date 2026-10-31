@@ -49,7 +49,7 @@ Evidence, summons and bail records you can verify
 
 [Case replay](https://nyaysetu-project.vercel.app/case-study) · [Verify a file](https://nyaysetu-project.vercel.app/verify) · [Transparency](https://nyaysetu-project.vercel.app/transparency) · [Handbook](https://nyaysetu-project.vercel.app/handbook) · [API](https://nyaysetu-project.vercel.app/api/v1/openapi.json)
 
-**Developed by [Sai Randive](https://github.com/SAI-RANDIVE)**
+**Developed by [Apurva Sanpurkar](https://github.com/Apurva-Sanpurkar) · VIT Pune**
 
 </div>
 
@@ -732,9 +732,9 @@ These are the questions any careful reviewer should ask; the answers are here ra
 
 ## 👤 Developer
 
-**Sai Randive** — design and development of NyaySetu: smart contracts, API, web portal, field app and documentation.
+**Apurva Sanpurkar**, VIT Pune — design and development of NyaySetu: smart contracts, API, web portal, field app and documentation.
 
-GitHub: [@SAI-RANDIVE](https://github.com/SAI-RANDIVE)
+GitHub: [@Apurva-Sanpurkar](https://github.com/Apurva-Sanpurkar)
 
 ---
 
